@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --black: #333;
+    --white: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+}
+
+header.sticky {
+    padding: 10px 100px;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menuToggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    transition: 0.25s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navigation.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navigation li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.navigation li a {
+    color: var(--black);
+    font-size: 1.2em;
+    letter-spacing: 4px;
+    display: inline-block;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+section {
+    position: relative;
+    padding: 100px;
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .contentbx {
+    position: relative;
+    z-index: 1;
+    background: var(--white);
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner .contentbx h2 {
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--black);
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.banner .contentbx h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--black);
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn {
+    position: relative;
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: 2px solid var(--black);
+    text-transform: uppercase;
+    transition: 0.25s;
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-block;
+    color: var(--black);
+    background: var(--white);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    color: var(--white) !important;
+    background: var(--black);
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title h2 {
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.title p {
+    margin-top: 40px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.title h2:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 6px;
+    background: var(--black);
+}
+
+p {
+    color: var(--black);
+    font-weight: 300;
+    text-align: justify;
+}
+
+.about .contentbx {
+    position: relative;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.about .contentbx .content {
+    position: relative;
+}
+
+.about .contentbx .content .imgbx {
+    min-height: 400px;
+}
+
+.post {
+    position: relative;
+}
+
+.post .contentbx {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.post .contentbx .postColumn {
+    position: relative;
+}
+
+.post .contentbx .postColumn .postBox {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.post .contentbx .postColumn .postBox.extraHeight {
+    height: 600px;
+}
+
+.post .contentbx .postColumn .postBox .textbx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.25s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.post .contentbx .postColumn .postBox:hover .textbx {
+    opacity: 0.85;
+    visibility: visible;
+}
+
+.post .contentbx .postColumn .postBox .textbx h3 {
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: var(--black);
+}
+
+.post .contentbx .postColumn .postBox .textbx .btn {
+    padding: 4px 10px;
+    background: vae(--black);
+    color: var(--black);
+    font-weight: 300;
+    font-size: 1em;
+}
