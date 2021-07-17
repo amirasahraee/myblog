@@ -1,4 +1,5 @@
 let toggle;
+let menuClose;
 
 const load = () => {
     const menuToggle = document.querySelector('.menuToggle');
@@ -23,4 +24,14 @@ const load = () => {
         const header = document.querySelector('header');
         header.classList.toggle('sticky', window.scrollY > 0);
     })
+
+    //navigation close menu after clicked any link
+
+    menuClose = () => {
+        menuToggle.classList.remove('active');
+        navigation.classList.remove('active');
+        menuIcon.classList.remove('fa-close');
+        menuIcon.classList.add('fa-bars');
+    }
+
 }
