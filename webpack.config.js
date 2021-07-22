@@ -7,6 +7,8 @@ module.exports = {
     mode: 'development',
     entry: {
         home: './src/pages/home/index.js',
+        post: './src/pages/post/index.js',
+        awesome:'font-awesome/scss/font-awesome.scss'
     },
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -41,15 +43,15 @@ module.exports = {
         }),
         new htmlWebpackPlugin({
             template: './src/pages/home/index.html',
-            chunks: ['home'],
+            chunks: ['awesome','home'],
             path: path.join(__dirname, 'build'),
             filename: 'index.html',
         }),
         new htmlWebpackPlugin({
             template: './src/pages/post/index.html',
-            chunks: ['home'],
+            chunks: ['awesome','post'],
+            filename: 'post',
             path: path.join(__dirname, 'build'),
-            filename: 'post.html',
         })
     ],
     devtool: 'inline-source-map',
