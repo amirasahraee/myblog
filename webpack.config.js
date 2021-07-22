@@ -44,6 +44,12 @@ module.exports = {
             chunks: ['home'],
             path: path.join(__dirname, 'build'),
             filename: 'index.html',
+        }),
+        new htmlWebpackPlugin({
+            template: './src/pages/post/index.html',
+            chunks: ['home'],
+            path: path.join(__dirname, 'build'),
+            filename: 'post.html',
         })
     ],
     devtool: 'inline-source-map',

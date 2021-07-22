@@ -1,28 +1,29 @@
 import 'font-awesome/scss/font-awesome.scss';
 import './index.scss';
-let toggle;
-let menuClose;
 
-const load = () => {
+let menuClose;
+window.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menuToggle');
     const menuIcon = document.getElementById('menuIcon');
     const navigation = document.body.querySelector('.navigation');
+
     // for opening menu
-    toggle = () => {
-        menuToggle.classList.toggle('active');
-        navigation.classList.toggle('active');
+    menuIcon.addEventListener('click',
+        () => {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
 
 
-        if (menuToggle.classList.contains('active')) {
-            menuIcon.classList.remove('fa-bars');
-            menuIcon.classList.add('fa-close');
-        } else {
-            menuIcon.classList.remove('fa-close');
-            menuIcon.classList.add('fa-bars');
-        }
-    }
+            if (menuToggle.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-close');
+            } else {
+                menuIcon.classList.remove('fa-close');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const header = document.querySelector('header');
         header.classList.toggle('sticky', window.scrollY > 0);
     })
@@ -35,5 +36,4 @@ const load = () => {
         menuIcon.classList.remove('fa-close');
         menuIcon.classList.add('fa-bars');
     }
-
-}
+});
