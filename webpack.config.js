@@ -56,5 +56,10 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'build'),
         port: 3000,
+        proxy: {
+            '/api/*': 'http://192.168.2.123:8000',
+            '/admin/*': 'http://192.168.2.123:8000',
+            '/static/*': 'http://192.168.2.123:8000',
+          },
     },
 };
