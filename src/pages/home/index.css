@@ -372,6 +372,7 @@
             text-align: center;
             letter-spacing: 1px;
         }
+     
         /* responsive */
         
         @media(max-width:991px) {
@@ -418,5 +419,8 @@
             }
             .mgt60 {
                 margin-top: 0px;
+            }
+            .pt80{
+                padding-top: 80px;
             }
         }

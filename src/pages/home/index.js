@@ -1,3 +1,5 @@
+import 'font-awesome/scss/font-awesome.scss';
+import './index.scss';
 let toggle;
 let menuClose;
 
