@@ -8,12 +8,12 @@ module.exports = {
     entry: {
         home: './src/pages/home/index.js',
         post: './src/pages/post/index.js',
-        awesome:'font-awesome/scss/font-awesome.scss'
+        awesome: 'font-awesome/scss/font-awesome.scss'
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'assets/js/[name].js',
-        assetModuleFilename : 'assets/fonts/[name].[ext]'
+        filename: 'assets/js/[name].[hash].js',
+        assetModuleFilename: 'assets/fonts/[name].[ext]'
     },
     module: {
         rules: [
@@ -43,13 +43,13 @@ module.exports = {
         }),
         new htmlWebpackPlugin({
             template: './src/pages/home/index.html',
-            chunks: ['awesome','home'],
+            chunks: ['awesome', 'home'],
             path: path.join(__dirname, 'build'),
             filename: 'index.html',
         }),
         new htmlWebpackPlugin({
             template: './src/pages/post/index.html',
-            chunks: ['awesome','post'],
+            chunks: ['awesome', 'post'],
             filename: 'post',
             path: path.join(__dirname, 'build'),
         })
@@ -62,6 +62,6 @@ module.exports = {
             '/api/*': 'http://192.168.2.123:8000',
             '/admin/*': 'http://192.168.2.123:8000',
             '/static/*': 'http://192.168.2.123:8000',
-          },
+        },
     },
 };
