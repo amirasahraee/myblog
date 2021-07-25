@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const postBox = ` 
             <div class="postBox" id="${postdata.id}">
                 <div class="imgbx">
-                    <img src="${postdata.image}" loading="lazy" class="cover">
+                    <img src="${postdata.image}"  class="cover">
                 </div>
                 <div class="textbx">
                     <h3>${postdata.title}</h3>
