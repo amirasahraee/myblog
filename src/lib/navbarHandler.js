@@ -32,8 +32,7 @@ export function navbarHandler() {
         navigation.classList.remove('active');
         menuIcon.classList.remove('fa-close');
         menuIcon.classList.add('fa-bars');
-    }
-    console.log(menuClose.length);
+    };
     menuClose.forEach((element) => {
         element.addEventListener('click', close);
     })

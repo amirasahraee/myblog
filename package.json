@@ -30,6 +30,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "font-awesome": "^4.7.0"
   }
 }
