@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "docker": "npm install && webpack build"
   },
   "repository": {
     "type": "git",
