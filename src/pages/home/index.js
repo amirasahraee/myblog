@@ -4,7 +4,7 @@ import { navbarHandler } from '../../lib/navbarHandler';
 
 window.addEventListener('DOMContentLoaded', () => {
     navbarHandler();
-
+    document.title = 'My Blog';
 
 
     // information site
@@ -99,11 +99,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
                     postColumn[i].innerHTML += postBox;
                     if (i < 2) {
+                        
                         i++;
                     } else {
                         i = 0;
                     }
-
+                   
+                    
 
                 });
 
