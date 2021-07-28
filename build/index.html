@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script defer src="assets/js/home.fb162458f3aa42c27984.js"></script><script defer src="assets/js/awesome.fb162458f3aa42c27984.js"></script><link href="assets/css/homefb162458f3aa42c27984.css" rel="stylesheet"><link href="assets/css/awesomefb162458f3aa42c27984.css" rel="stylesheet"></head>
+
+<body>
+    <header>
+        <a href="/" class="logo">My Blog</a>
+        <div class="menuToggle">
+            <i id="menuIcon" class="fa fa-bars" onclick="toggle()"></i>
+        </div>
+    </header>
+    <ul class="navigation">
+        <li><a href="#" class="menuClose">Home</a></li>
+        <li><a href="#about" class="menuClose">About</a></li>
+        <li><a href="#post" class="menuClose">Post</a></li>
+        <li><a href="#contact" class="menuClose">Contact</a></li>
+
+    </ul>
+
+    <!-- banner-->
+    <section class="banner" id="home">
+        <img src="" class="cover" id="bannerImage">
+        <div class="contentbx">
+            <h2 id="bannerTitle"></h2>
+            <h4 id="bannerText"></h4>
+            <a href="#about" class="btn">about us</a>
+        </div>
+    </section>
+    <!--about-->
+    <section class="about" id="about">
+        <div class="title">
+            <h2>About us</h2>
+        </div>
+        <div class="contentbx">
+            <div class="content" id="aboutUsText">
+
+            </div>
+            <div class="content">
+                <div class="imgbx">
+                    <img src="" class="cover" id="aboutUsImage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Last Blog Post -->
+    <section class="post" id="post">
+        <div class="title">
+            <h2>Last Posts</h2>
+            <p id="lastPostsText"></p>
+        </div>
+        <div class="contentbx">
+            <div class="postColumn">
+            </div>
+            <div class="postColumn">
+            </div>
+            <div class="postColumn">
+            </div>
+        </div>
+        <div class="title">
+            <button class="btn mgt60" id="postMore">Load More</button>
+        </div>
+    </section>
+    <!--contact-->
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2>Get in Touch</h2>
+            <p id="contactUsText"></p>
+        </div>
+        <div class="contactForm">
+            <form method="POST" name="formContactUs">
+                <div class="row">
+                    <input type="text" name="firstName" placeholder="First Name" oninvalid="this.setCustomValidity('Please Enter Your First Name')"  onchange="this.setCustomValidity('')" required>
+                    <input type="text" name="lastName" placeholder="Last Name" oninvalid="this.setCustomValidity('Please Enter Your Last Name')"  onchange="this.setCustomValidity('')" required>
+                </div>
+                <div class="row">
+                    <input type="email" name="email" placeholder="Email Address" oninvalid="this.setCustomValidity('Please Enter Your email')"  onchange="this.setCustomValidity('')" required>
+                    <input type="tel" name="phone" placeholder="Mobile No." pattern="[0-9]{11}" oninvalid="this.setCustomValidity('Please Enter Your Phone Number')"  onchange="this.setCustomValidity('')" required>
+                </div>
+                <div class="row2">
+                    <textarea name="message" placeholder="Message" oninvalid="this.setCustomValidity('Please Enter Your Message')"  onchange="this.setCustomValidity('')" required></textarea>
+                </div>
+                <div class="row2">
+                    <input type="submit" value="Send" class="btn" >
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!--footer-->
+    <footer>
+        <a href="/" class="logo">My Blog</a>
+        <ul class="footerMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#post">Post</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyrighText">copyright © Sahraeefar. All Right.</p>
+    </footer>
+
+
+</body>
+
+</html>
