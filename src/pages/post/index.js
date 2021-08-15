@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="textbx">
                     <h3>${postdata.title}</h3>
-                    <a href="post?id=${postdata.id}&title=${postdata.title}" class="btn">Read More</a>
+                    <a href="/post?id=${postdata.id}&title=${postdata.title}" class="btn">Read More</a>
                 </div>
             </div>
     `       
